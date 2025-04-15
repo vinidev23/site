@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-widht, initial-scale=1.0">
+
+<title>Para o Amor da Minha Vida</title>
+<style> 
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffe6f0, #ffd6e0);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+
+      color: #d6336c;
+      margin-top: 40px;
+      font-size: 2.5rem;
+}
+
+p {
+
+    font-size: 1.3rem;
+    color: #333;
+    margin: 10px 20px;
+}
+
+.heart {
+
+    position: absolute;
+    color: red;
+    margin: 10px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+
+    0% {
+      transform: translateY(-100px)
+      rotate(0deg);
+    }
+
+    100% {
+          transform: translateY(100vh) 
+          rotate(360deg);
+     }
+    }
+
+    .photos {
+        margin-top: 30px;
+    }
+
+    .photos img {
+            width: 250px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .surprise-btn {
+            margin: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff5e8e;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+    }
+
+    .suprise-btn:hover {
+        background-color: #e04b78;
+    }
+
+    .surpise-message {
+            display: none;
+            font-size: 1.5rem;
+            color: #b30047;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+            from{ opacity: 0; }
+            to { opacity: 1; }
+    }
+     </style>
+
+   </head>
+
+<body>
+
+    <h1>Para a mulher mais incrível do Mundo!</h1>
+    <p>Esse site é só um pedacinho do quanto você é especial para mim, minha princesa. Eu te amo muito!</p>
+
+    <div class="photos">
+       <img src="foto1.jpeg" alt="Foto juntinhos">
+       <img src="foto2.jpeg" alt="Com o meu amorzinho">
+       <img src="foto3.jpeg" alt="A dona do sorriso mais lindo do mundo!">
+    </div>
+
+    <button class="suprise-btn" onclick="mostrarSurpresa()">Clique para uma surpresa</button>
+    <div class="surpise-message" id="surpresa">
+        Você é o melhor presente que Deus poderia me dar!
+</div>
+
+   <script>
+        function createHeart() {
+             const heart = document.createElement('div');
+             heart.className = 'heart';
+             heart.textContent ='❤️';
+             heart.style.left = Math.random () * 100 + "vw";
+             heart.style.fontSize = (20 + Math.random() * 30) + 'px';
+             heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+             document.body.appendChild(heart);
+
+             setTimeout(() => heart.remove(), 5000);
+    }
+
+        setInterval(createHeart, 300);
+
+        function mostrarSurpresa() {
+            document.getElementById('surpresa').style.display = "block";
+        }
+
+</script>
+
+</body>
+</html>
